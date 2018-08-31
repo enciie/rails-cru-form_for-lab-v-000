@@ -7,7 +7,7 @@ class GenresController < ApplicationController
   def show
     @genre = Genre.find(params[:id])
   end
-  
+
   def new
     @genre = Genre.new
   end
@@ -22,6 +22,7 @@ class GenresController < ApplicationController
   private
 
     def genre_params
-      params.require(:genre).permit(:name ) 
+      params.require(:genre).permit(:name) 
+    end
 
 end
